@@ -199,6 +199,13 @@ Django auth features run on a separate database. To init this database and set u
 
     python manage.py migrate
     
+*Troubleshooting:* If at this point you encounter a `sqlite3.OperationalError: unable to open database file` error, check your `sefaria/local_settings.py` file to see if you specified a subdirectory in your `.sqlite` databases would be stored. If this is the case (say, for example, that you specified a directory called `My-Databases`), ensure that those directories exist, then prepare and perform the migration:
+
+    mkdir My-Databases
+    sudo chown <your username> My-Databases/
+    python manage.py makemigrations
+    python manage.py migrate
+
 
 #### 10) Install Node:
 
