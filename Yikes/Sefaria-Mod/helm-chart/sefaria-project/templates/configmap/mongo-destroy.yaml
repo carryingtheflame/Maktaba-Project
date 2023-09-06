@@ -1,0 +1,32 @@
+{{- if .Values.restore.cleanup }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: destroy-mongo-{{ .Values.deployEnv }}
+  labels:
+    deployEnv: {{ .Values.deployEnv | quote }}
+    {{- include "sefaria.labels" . | nindent 4 }}
+  annotations:
+    helm.sh/hook: post-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+    helm.sh/hook-weight: "5"
+data:
+  destroy-mongo.sh: |-
+    #!/bin/bash
+    set -e
+    set -x
+
+    {{- if .Values.restore.dynamicName }}
+    DB_NAME="$SEFARIA_DB-{{ .Values.deployEnv }}"
+    {{ else }}
+    DB_NAME=$SEFARIA_DB
+    {{ end }}
+
+    mongo --host $MONGO_HOST $DB_NAME <<EOF
+    db.dropDatabase();
+    EOF
+
+    mongo --host $MONGO_HOST $APSCHEDULER_NAME <<EOF
+    db.dropDatabase();
+    EOF
+{{- end }}

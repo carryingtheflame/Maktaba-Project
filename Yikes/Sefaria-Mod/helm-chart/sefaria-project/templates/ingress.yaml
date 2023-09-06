@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-{{ .Values.deployEnv }}
+  labels:
+    {{- include "sefaria.labels" . | nindent 4 }}
+  annotations:
+    kubernetes.io/ingress.class: nginx-ingress
+  {{- if .Values.instrumentation.enabled }}
+    nginx.ingress.kubernetes.io/enable-opentracing: "true"
+    nginx.ingress.kubernetes.io/jaeger-service-name: {{ .Values.deployEnv }}-ingress
+    nginx.ingress.kubernetes.io/jaeger-propagation-format: w3c
+  {{- end }}
+  {{- range $key, $value := .Values.ingress.annotations }}
+    {{ $key }}: {{ $value | quote }}
+  {{- end }}
+spec:
+  tls:
+    - secretName: {{ template "sefaria.secrets.originTls" . }}
+    {{- if or .Values.ingress.secrets.originIlTls.data .Values.ingress.secrets.originIlTls.ref }}
+    - secretName: {{ template "sefaria.secrets.originIlTls" . }}
+    {{- end }}
+  rules:
+    {{- range .Values.ingress.hosts }}
+    - host: {{ tpl .host $ | quote }}
+      http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: {{ .serviceName | default "nginx" }}-{{ $.Values.deployEnv }}
+                port:
+                  number: {{ .port | default "80" }}
+    {{- end }}

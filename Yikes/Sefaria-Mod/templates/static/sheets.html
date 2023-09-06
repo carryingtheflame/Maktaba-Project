@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n static %}
+
+{% block title %}{% trans "Sheets on Sefaria" %}{% endblock %}
+
+{% block description %}{% trans "Mix and match sources from Sefaria’s library of Jewish texts, and add your comments, images and videos." %}{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+
+{% block js %}
+<script>
+    {% autoescape off %}
+    DJANGO_VARS.containerId = 'sheetsLandingPageInner';
+    DJANGO_VARS.reactComponentName = 'SheetsLandingPage';
+    {% endautoescape %}
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="sheetsLandingPage" class="staticPageFrame">
+  <div id="sheetsLandingPageInner" class="staticPageInner">
+    <h1 id="appLoading">Loading...</h1>
+  </div>
+</div>
+{% endblock %}
