@@ -3,7 +3,6 @@ from urllib.parse import urlparse
 import regex as re
 from collections import defaultdict
 from django.core.validators import URLValidator
-from django.core.exceptions import ValidationError
 from . import abstract as abst
 from . import text
 from sefaria.system.database import db
@@ -225,11 +224,7 @@ class WebPage(abst.AbstractMongoRecord):
 
         if add_hit:
             webpage.add_hit()
-        try:
-            webpage.save()
-        except ValidationError:
-            # something is wrong with the webpage URL
-            return "excluded", None
+        webpage.save()
         return "saved", webpage
 
     def client_contents(self):

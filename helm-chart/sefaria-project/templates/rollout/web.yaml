@@ -34,8 +34,6 @@ spec:
             value: {{ .Values.deployEnv }}
           - name: version
             value: {{ .Values.web.containerImage.tag }}
-          - name: chartVersion
-            value: {{ .Chart.Version }}
       {{- end }}
   selector:
     matchLabels:
