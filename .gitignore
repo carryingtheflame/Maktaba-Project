@@ -133,3 +133,5 @@ static/sheetrank.json
 env/*
 dump/*
 My Notes.mkd
+package-lock.json
+
