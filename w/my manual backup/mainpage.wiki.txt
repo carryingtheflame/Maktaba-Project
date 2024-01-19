@@ -1,0 +1,41 @@
+<strong>MediaWiki has been installed.</strong>
+
+Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User's Guide] for information on using the wiki software.
+
+== Getting started ==
+* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]
+* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]
+* [https://lists.wikimedia.org/postorius/lists/mediawiki-announce.lists.wikimedia.org/ MediaWiki release mailing list]
+* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]
+* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]
+
+== About Islam in Context ==
+Muslims revere three ancient texts: the [[Quran, Sunna, and Hadith]]. These texts were written a long time ago, when life was different. For example, there was no electric lighting, and many infants passed away before the end of their first year. The ancient texts of Islam offered direct guidance for how to grow societies which thrived despite such conditions.
+
+Islamic societies studied [[science]], because this was encouraged by their texts. Such studies led to developments in technology and medicine, which improved living conditions and health. This made it possible for Islamic societies to thrive with greater ease.
+
+Because of these changes, Muslims now have a choice about how to interpret ancient texts: literally or contextually.  
+
+=== Literal Interpretations ===
+One option is ''literal'' interpretation''.'' This means following guidance exactly as written. 
+
+Literal interpretations of Islamic texts can be harsh. For example, according to the Quran, one who steals may have their hands cut off as a deterrent to others ([https://corpus.quran.com/translation.jsp?chapter=5&verse=38 Quran 5:38]). If taken literally, then one who steals a loaf of bread could have both of their hands stolen by authorities. This does not seem fair. 
+
+Guidance from ancient texts served its purpose a long time ago. However, it would not be appropriate to interpret such guidance literally today. 
+
+=== Contextual Interpretations ===
+Another option is ''contextual'' interpretation''.'' This means reading with sensitivity to how the world has changed since ancient times. When reading guidance from an ancient text contextually, one first considers the purposes it may have served in ancient times. This reveals the wisdom behind the guidance. Next, one applies that wisdom to the current situation.
+
+To illustrate, consider the example about punishment for stealing. Maybe stealing was a widespread practice which discouraged commerce, leading to a scarcity of prepared goods such as bread. After all, why sell baked bread if it will just be stolen? Perhaps this punishment led to an increase in the supply of prepared goods in the ancient world. Today, punishments for stealing tend to be more private.
+
+The wisdom might be that shaming shifts social norms. For example, by publicly shaming men who disrespected women, the [[wikipedia:MeToo_movement|MeToo movement]] reduced sexual harassment in the U.S. film and television industry. As in the case of stealing, the movement has more recently confronted questions about whether such tactics are needed after social norms have already been shifted, and if a pivot to more private strategies may be appropriate to maintain norms.
+
+== Highlighted Articles ==
+Check out some of our most popular articles:
+
+* [[Alcohol]]
+* [[Gender relations]]
+* [[LGBTQ+]]
+
+== Support Islam in Context ==
+If you find our content useful, consider donating by <TODO FIGURE THAT BIT OUT>. We would rather not run ads, and we rely on the generous contributions of our readers to maintain this website.

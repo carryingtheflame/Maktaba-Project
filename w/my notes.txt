@@ -1,0 +1,10 @@
+my notes
+
+from any directory:
+    brew services start mariadb
+
+from this directory:
+    php -S localhost:8000
+
+open browser and visit:
+    http://localhost:8000
